@@ -3,7 +3,8 @@ from ventas import Ventas
 
 if __name__=='__main__':
 
-        gestorLista= Gestor()  #gestorLista es un objeto de gestor, ahi teng mi clase manejadora
+        gestorLista= Gestor()  #gestorLista es un objeto de gestor, ahi tengo mi clase manejadora
+        
 
         print(f"--- MENU: ---")
         print(f"[1]. Acumular importe de una factura ")
