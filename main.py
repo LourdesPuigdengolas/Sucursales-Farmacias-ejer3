@@ -21,11 +21,13 @@ if __name__=='__main__':
                         #lista.mostrarLista() #en caso de listas llamamos a la lista de objetos
                         diaa= int(input("Ingrese el día de la semana (empezando por 1 Lun)"))
                         numSu= int(input("Ingrese el numero de sucursal "))
-                        impFac= float(input("Ingrese el importe de la factura "))
+                        impFac= int(input("Ingrese el importe de la factura "))
                         gestorLista.agregarFactura(diaa, numSu, impFac)
+
                 elif opcion == 2: 
                         suc= int(input("Ingrese el numero de sucursal "))
-                        pass
+                        gestorLista.calculaTotalSuc(suc)
+                        
                 elif opcion == 3: 
                         day= int(input("Ingrese el día de la semana "))
                         gestorLista.sucursalMasFac(day)

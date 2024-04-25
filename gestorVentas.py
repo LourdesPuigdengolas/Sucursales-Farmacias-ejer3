@@ -30,14 +30,17 @@ class Gestor:
     # -------ARREGLAR FUNCIONES DESDE ACÁ ----------------------
 
     def calculaTotalSuc(self, suc):
-        total=0
-        i=suc
-        j=0
-        for i in range(len(self.__lista[i])):
-            for j in range(len(self.__lista[j])):
-                total+= self.__lista[i][j].importe
-                j+=1
-        print("El total de facturación para la sucursal {} es de {} ",{suc}, {total}) 
+       # total=0
+        #j=0
+        #for i in range(len(self.__lista[suc-1])):
+          #  for j in range(len(self.__lista[j])):
+           #    j+=1
+        columnas = 7
+        total = 0  
+        for i in range(suc-1):
+            for j in range(columnas):
+               total += self.__lista[suc-1][j]      
+        print("El total de facturación para la sucursal {} es de {} ".format(suc, total)) 
 
     def sucursalMasFac(self, day):
         max=0
