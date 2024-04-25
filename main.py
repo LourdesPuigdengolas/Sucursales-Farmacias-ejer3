@@ -21,7 +21,7 @@ if __name__=='__main__':
                         #caja.mostrarDatos()  # siempre llamar a un ojeto no a una clase, porque el que tiene atributos y metodos es el objeto
                         #lista.mostrarLista() #en caso de listas llamamos a la lista de objetos
                         diaa= int(input("Ingrese el día de la semana (empezando por 1 Lun)"))
-                        numSu= int(input("Ingrese el numero de sucursal "))
+                        numSu= int(input("Ingrese el numero de sucursal del 1-5 "))
                         impFac= int(input("Ingrese el importe de la factura "))
                         gestorLista.agregarFactura(diaa, numSu, impFac)
 
@@ -32,9 +32,10 @@ if __name__=='__main__':
                 elif opcion == 3: 
                         day= int(input("Ingrese el día de la semana "))
                         gestorLista.sucursalMasFac(day)
-                        pass
+
                 elif opcion == 4: 
-                        pass
+                        gestorLista.menorFacSemanal()
+                        
                 elif opcion == 5: 
                         pass
                 

@@ -47,21 +47,22 @@ class Gestor:
             if (self.__lista[i][day-1] > max):
                    factura = self.__lista[i][day-1]
                    max= factura
-                   sucursal= i   
+                   sucursal= i+1 
         print("La sucursal {} es la que más facturó para el día {} ".format (sucursal, day))    
 
      # -------ARREGLAR FUNCIONES DESDE ACÁ ----------------------
 
-    def menorFacSemanal(self):
+    def menorFacSemanal(self):  #Calcular la sucursal con menos facturación durante toda la semana
         min=99999
-        i=0
-        j=0
-        monto=0
-        for i in range(len(self.__lista[i])):
-            for j in range(len(self.__lista[j])):
-                monto+= self.__lista[i][j].importe
-                j+=1
-            if (monto < min):
-                    min= monto
-            i+=1
-        print("La sucursal que menos facturó por semana facturó un total de $ {} ".format(min))
+        filas=5
+        columnas=7
+        suc=0
+        tot=0
+        for i in range(filas):
+            for j in range(columnas):
+                tot+= self.__lista[i][j]  #No está sumando, da el primer valor de la sucursal
+            
+                if (tot < min):
+                        suc= i+1
+                        min= tot             
+        print("La sucursal {} fué la que menos facturó por semana y facturó un total de $ {} ".format(suc,min))
