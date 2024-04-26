@@ -58,11 +58,27 @@ class Gestor:
         columnas=7
         suc=0
         tot=0
+        sumaFilas=[]
+        i=0
         for i in range(filas):
             for j in range(columnas):
-                tot+= self.__lista[i][j]  #No está sumando, da el primer valor de la sucursal
-            
-                if (tot < min):
-                        suc= i+1
-                        min= tot             
+                tot+= self.__lista[i][j]  
+            sumaFilas.append(tot)
+            tot=0
+
+        for i in range(filas):       
+            if (sumaFilas[i] < min):
+                    suc= i+1
+                    min= sumaFilas[i]            
         print("La sucursal {} fué la que menos facturó por semana y facturó un total de $ {} ".format(suc,min))
+
+    def calculaTotal(self):   #Calcular el total facturado por todas las sucursales durante toda la semana.
+        filas=5
+        columnas=7
+        tot=0
+        i=0
+        for i in range(filas):
+            for j in range(columnas):
+                tot+= self.__lista[i][j]  
+            
+        print("El total facturado esta semana fue de $ {} ".format(tot))   

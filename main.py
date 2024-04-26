@@ -37,6 +37,7 @@ if __name__=='__main__':
                         gestorLista.menorFacSemanal()
                         
                 elif opcion == 5: 
-                        pass
+                        gestorLista.calculaTotal()
+                        
                 
                 opcion= int(input("Ingrese el numero de opción que desea: "))
